@@ -1,6 +1,17 @@
 {
   "name": "miko-ng",
-  "version": "0.0.1",
+  "version": "0.0.3",
+  "description": "Create split to panels, 2 or more in one row or column",
+  "author": "Miklos Nagyhazi, nmiko1969@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nmiko1969/miko-ng.git"
+  },
+  "keywords": [
+    "split",
+    "splitter",
+    "SplittedTab"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

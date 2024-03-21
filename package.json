@@ -1,12 +1,13 @@
 {
   "name": "ngx-nm-splitter",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Create split to panels, 2 or more in one row or column",
   "author": "Miklos Nagyhazi, nmiko1969@gmail.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/nmiko1969/miko-ng.git"
   },
+  "homepage": "https://stackblitz.com/github/nmiko1969/splitterdemo",
   "keywords": [
     "split",
     "splitter",

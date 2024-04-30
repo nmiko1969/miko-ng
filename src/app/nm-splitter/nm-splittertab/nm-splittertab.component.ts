@@ -38,7 +38,13 @@ export class NmSplittertabComponent implements OnInit {
 
   separatorList: boolean[] = [];
 
-  constructor() { }
+  constructor(
+
+  ) { 
+    window.addEventListener('resize', () => {
+      this.initSizes();
+    } );
+  }
 
   ngOnInit(): void {
     
@@ -46,7 +52,6 @@ export class NmSplittertabComponent implements OnInit {
 
   ngOnChanges() {
     this.initSeparators();
-    
   }
 
   
@@ -64,7 +69,7 @@ export class NmSplittertabComponent implements OnInit {
 
   }
 
-
+  
 
   initSizes() {
     let ind: number =0;
@@ -118,6 +123,7 @@ export class NmSplittertabComponent implements OnInit {
 
   initSplitter() {
     this.splitPercents = [];
+    this.panels = [];
     this.componentCount = this.childrensLength();
     this.initSeparators();
     if (this.splithoriz) {
@@ -173,9 +179,9 @@ export class NmSplittertabComponent implements OnInit {
 
   mousemoveondivider(e: any) {
     if (this.mouseDowned && this.moveable && this.selectedPanel>-1) {
-      let mousePos: number = e.clientX + window.scrollX;// - this.elementView!.nativeElement.getBoundingClientRect().x;
+      let mousePos: number = (e.clientX + window.scrollX);
       if (this.splithoriz) {
-        mousePos = e.clientY + window.scrollY; // - this.elementView!.nativeElement.getBoundingClientRect().y;
+        mousePos = (e.clientY + window.scrollY);
       }
       let start: number = this.panels[this.selectedPanel-1].vstart;
       let nextstart: number = this.panels[this.selectedPanel].vend;
